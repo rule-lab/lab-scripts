@@ -1,0 +1,33 @@
+Monte requires an older version of the fortran compiler than can be found in the
+"current" repositories for Ubuntu. Here is Kaustubh's instructive guide to
+manually adding the older package for installation.
+
+####
+
+sudo gedit /etc/apt/sources.list
+
+add this line:
+
+deb http://mirror.pnl.gov/ubuntu/ hardy-updates main universe
+[a complete list of mirror sites are given here:
+http://packages.ubuntu.com/hardy-updates/i386/g77-3.4/download]
+
+save and close the file
+
+logout, login
+
+open synaptics: if you don't see the "http://mirror.pnl.gov/ubuntu/
+hardy-updates main universe" in the source-list on the left, press
+"Reload"
+
+choose
+http://mirror.pnl.gov/ubuntu/ hardy-updates main universe from the left
+column - this should show the list of packages. choose g77 from the list,
+mark for installation and apply.
+
+monte should work now.
+
+go back to the source file and comment out the line you added.
+
+** Also needed are versions 8.0.4 or later of tcl and tk - this is
+straightforward - just use the latest version in synaptics.
