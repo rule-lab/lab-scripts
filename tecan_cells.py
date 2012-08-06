@@ -80,7 +80,7 @@ def main():
                     break
             
             samples.append((name, od))
-        th = '|        Sample        |    OD-600    |    Cells/mL    |    Volume for {0} cells    |\n'
+        th = '|        Sample        |    OD-600    |    Cells/mL    |  Volume(uL) for {0} cells  |\n'
         report.write(th.format(args.target))
         for c in range(len(th.format(args.target)) - 1):
             report.write('-')
@@ -88,7 +88,7 @@ def main():
         for n, o in samples:
             od = o * args.dilution
             cpml = od * args.density
-            vol = str((args.target / cpml) * 1000) + '(uL)'
+            vol = str((args.target / cpml) * 1000)
             vcen = 25 + len(str(args.target))
             s_line = '|{0}|{1}|{2}|{3}|\n'.format(prettyCenter(n, 22, 22),
                                                  prettyCenter(od, 14, 6),
