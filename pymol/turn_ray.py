@@ -9,8 +9,8 @@ import os.path
 FRAMES = 360  # How many frames to spread the spin over
 AXIS = 'y'  # The axis about which to spin
 OUTPUT = 'turn_ray_images'  # The output directory for images
-RAY_X = 0  # The x-dimension of the image, 0 will use current window size
-RAY_Y = 0  # The y-dimension of the image, 0 will use current window size
+RAY_X = 1920  # The x-dimension of the image, 0 will use current window size
+RAY_Y = 1080  # The y-dimension of the image, 0 will use current window size
 
 os.mkdir(OUTPUT)
 
