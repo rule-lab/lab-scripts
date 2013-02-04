@@ -1,5 +1,3 @@
-#! /usr/bin/python
-
 """
 A script that will execute a 360 degree spin of the structure, ray-tracing the
 structure at each interval and saving the image.

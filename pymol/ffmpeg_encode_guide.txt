@@ -1,0 +1,8 @@
+Install ffmpeg from source:
+    Download source, move inside directory
+    ./configure --enable-gpl --enable-libx264
+    make
+    sudo make install
+
+Encode video from frames
+    ffmpeg -i %4d.png -r 25 -vcodec libx264 myvid.mkv
